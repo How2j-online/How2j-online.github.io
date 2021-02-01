@@ -17,9 +17,25 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Archiv - WangER&#39;s Blog</title>
+  <title>解决css文字不能小于12px - WangER&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -146,9 +162,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Archiv">
+            <span class="h2" id="subtitle" title="解决css文字不能小于12px">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-31 14:40" pubdate>
+        January 31, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      392 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -161,46 +214,99 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">Insgesamt 5 Artikel.</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/12/08/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <time style="float: right;">12-08</time>
-    </a>
-  
-    
-    <a href="/2020/12/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">正则表达式</span>
-      <time style="float: right;">12-08</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">解决css文字不能小于12px</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Chrome浏览器不支持字体小于12px的解决办法"><a href="#Chrome浏览器不支持字体小于12px的解决办法" class="headerlink" title="Chrome浏览器不支持字体小于12px的解决办法"></a>Chrome浏览器不支持字体小于12px的解决办法</h1><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><h5 id="使用CSS3的一个缩放属性：transform-scale"><a href="#使用CSS3的一个缩放属性：transform-scale" class="headerlink" title="使用CSS3的一个缩放属性：transform:scale()"></a>使用CSS3的一个缩放属性：transform:scale()</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">-webkit-transform</span><span class="hljs-selector-pseudo">:scale(0.833)</span>;<br><span class="hljs-comment">/*这个数字0.833，是缩放比例，可以根据你自己的情况不同而不同。*/</span><br></code></pre></td></tr></table></figure>
 
+<p>&emsp;&emsp;但是左边可能会出现留白。是因为做缩放处理的时候把宽度也缩放了。还有要注意一点，如果这个<code>&lt;p&gt;</code>元素有背景的话，也会使背景也随着变化，所以，我们通常的做法是给<code>&lt;p&gt;</code>标签里再套个一个标签，我这里用<code>&lt;span&gt;</code>标签。 然后会发现会发现现在反而没有效果，这是因为transform:scale()这个属性只为可以缩放可以定义宽高的元素，而span是行内元素；我们给span元素定义一个display:block,这样就可以了。<br>&emsp;&emsp;我们会发现一个问题，不管span元素是否左浮动，还是会发现左边出现了留白，我们可以通设置宽度等其他办法来解决。</p>
+<h2 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h2><h5 id="使用zoom属性"><a href="#使用zoom属性" class="headerlink" title="使用zoom属性"></a>使用zoom属性</h5><p>语法：<br>zoom：<code>normal</code> | <code>&lt;number&gt;</code> | <code>&lt;percentage&gt;</code><br>默认值：normal<br>适用于：所有元素<br>继承性：有</p>
+<hr>
+<p>取值：<br><code>normal</code>：<br>使用对象的实际尺寸。<br><code>&lt;number&gt;</code>：<br>用浮点数来定义缩放比例。不允许负值<br><code>&lt;percentage&gt;</code>：<br>用百分比来定义缩放比例。不允许负值</p>
+<hr>
+<p>说明：<br>设置或检索对象的缩放比例。<br>对应的脚本特性为zoom。</p>
+<p><code>详细介绍：http://www.w3chtml.com/css3/properties/user-interface/zoom.html</code></p>
 
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CSS/">CSS</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/31/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Git常用命令</span>
+                        <span class="visible-mobile">Vorheriger</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/08/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -314,9 +420,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
