@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2021/01/31/test/"/>
-    <url>/2021/01/31/test/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs flow">st&#x3D;&gt;start: 页面加载<br>e&#x3D;&gt;end: End:&gt;http:&#x2F;&#x2F;www.google.com<br>op1&#x3D;&gt;operation: get_hotel_ids|past<br>op2&#x3D;&gt;operation: get_proxy|current<br>sub1&#x3D;&gt;subroutine: get_proxy|current<br>op3&#x3D;&gt;operation: save_comment|current<br>op4&#x3D;&gt;operation: set_sentiment|current<br>op5&#x3D;&gt;operation: set_record|current<br><br>cond1&#x3D;&gt;condition: ids_remain空?<br>cond2&#x3D;&gt;condition: proxy_list空?<br>cond3&#x3D;&gt;condition: ids_got空?<br>cond4&#x3D;&gt;condition: 爬取成功??<br>cond5&#x3D;&gt;condition: ids_remain空?<br><br>io1&#x3D;&gt;inputoutput: ids-remain<br>io2&#x3D;&gt;inputoutput: proxy_list<br>io3&#x3D;&gt;inputoutput: ids-got<br><br>st-&gt;op1(right)-&gt;io1-&gt;cond1<br>cond1(yes)-&gt;sub1-&gt;io2-&gt;cond2<br>cond2(no)-&gt;op3<br>cond2(yes)-&gt;sub1<br>cond1(no)-&gt;op3-&gt;cond4<br>cond4(yes)-&gt;io3-&gt;cond3<br>cond4(no)-&gt;io1<br>cond3(no)-&gt;op4<br>cond3(yes, right)-&gt;cond5<br>cond5(yes)-&gt;op5<br>cond5(no)-&gt;cond3<br>op5-&gt;e<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Git常用命令</title>
     <link href="/2021/01/31/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <url>/2021/01/31/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
