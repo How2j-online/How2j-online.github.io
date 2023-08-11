@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="字节前端初阶训练营 记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字节前端初阶训练营">
+<meta property="og:url" content="http://example.com/2023/08/01/byteTech/elementary_stage/index.html">
+<meta property="og:site_name" content="Hexo How2j">
+<meta property="og:description" content="字节前端初阶训练营 记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308042238117.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308042302789.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308101047706.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308101048433.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/js_202308112107279.png">
+<meta property="article:published_time" content="2023-08-01T14:08:17.000Z">
+<meta property="article:modified_time" content="2023-08-11T15:36:14.267Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308042238117.png">
+
+
+<link rel="canonical" href="http://example.com/2023/08/01/byteTech/elementary_stage/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/08/01/byteTech/elementary_stage/","path":"2023/08/01/byteTech/elementary_stage/","title":"字节前端初阶训练营"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>字节前端初阶训练营 | Hexo How2j</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo How2j</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-%E5%9F%BA%E7%A1%80"><span class="nav-text">Linux 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9F%A5%E7%9C%8BLinux%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC"><span class="nav-text">一、查看Linux系统内核版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9F%A5%E7%9C%8B%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC"><span class="nav-text">二、查看发行版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="nav-text">三、进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="nav-text">1. 概念：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF"><span class="nav-text">2. 查看进程信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-text">四、文件管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-text">1. 文件系统磁盘空间利用率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%96%87%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-text">2. 文件基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90"><span class="nav-text">五、用户权限</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%94%A8%E6%88%B7%E8%B4%A6%E6%88%B7"><span class="nav-text">1. 用户账户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="nav-text">2. 文件权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-text">3. 查看用户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E6%93%8D%E4%BD%9C"><span class="nav-text">4. 用户权限操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-text">六、软件包管理工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Debian-APT-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">1. Debian APT 常用命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-%E5%9F%BA%E7%A1%80"><span class="nav-text">Shell 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%AF%AD%E6%B3%95%E5%92%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">一、语法和命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%8F%98%E9%87%8F"><span class="nav-text">1. 变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="nav-text">2. 自定义变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-text">3. 环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%BC%95%E7%94%A8"><span class="nav-text">4. 运算符和引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%AE%A1%E9%81%93"><span class="nav-text">5. 管道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-text">6. 重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E5%88%A4%E6%96%AD%E5%91%BD%E4%BB%A4"><span class="nav-text">7. 判断命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5"><span class="nav-text">8. 分支语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-text">9. 循环语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-%E5%87%BD%E6%95%B0"><span class="nav-text">10. 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-text">11. 模块化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">12. 常用命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Shell%E5%B1%95%E5%BC%80"><span class="nav-text">二、Shell展开</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A4%A7%E6%8B%AC%E5%8F%B7%E5%B1%95%E5%BC%80"><span class="nav-text">1. 大括号展开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%B3%A2%E6%B5%AA%E5%8F%B7%E5%B1%95%E5%BC%80"><span class="nav-text">2. 波浪号展开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8F%82%E6%95%B0%E5%B1%95%E5%BC%80"><span class="nav-text">3. 参数展开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%91%BD%E4%BB%A4%E6%9B%BF%E6%8D%A2"><span class="nav-text">4. 命令替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%AE%97%E6%9C%AF%E6%89%A9%E5%B1%95"><span class="nav-text">5. 算术扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E6%96%87%E4%BB%B6%E5%90%8D%E5%B1%95%E5%BC%80"><span class="nav-text">6. 文件名展开</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F"><span class="nav-text">编程范式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%91%BD%E4%BB%A4%E5%BC%8F"><span class="nav-text">一、命令式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B"><span class="nav-text">1. 面向过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-text">2. 面向对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-text">概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99"><span class="nav-text">五大基本原则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A3%B0%E6%98%8E%E5%BC%8F"><span class="nav-text">二、声明式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%87%BD%E6%95%B0%E5%BC%8F"><span class="nav-text">1. 函数式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="nav-text">2. 响应式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%82%BB%E5%9F%9F%E7%89%B9%E5%AE%9A%E8%AF%AD%E8%A8%80"><span class="nav-text">三、邻域特定语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%B9%E5%99%A8"><span class="nav-text">客户端容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="nav-text">一、浏览器架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A4%9A%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%86%E5%B7%A5"><span class="nav-text">二、多进程的分工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B"><span class="nav-text">三、渲染进程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-text">1. 渲染进程的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text">2. 渲染进程的工作流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BC%98%E5%8C%96"><span class="nav-text">四、优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96"><span class="nav-text">1. 首屏优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BC%98%E5%8C%96%E6%B8%B2%E6%9F%93%E6%80%A7%E8%83%BD"><span class="nav-text">2. 优化渲染性能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-JS%E4%BC%98%E5%8C%96"><span class="nav-text">3. JS优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JS"><span class="nav-text">深入理解JS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87"><span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84"><span class="nav-text">JS如何执行的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS%E7%9A%84%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-text">JS的进阶知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%97%AD%E5%8C%85"><span class="nav-text">1. 闭包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-this"><span class="nav-text">2. this</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="nav-text">3. 垃圾回收</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF-Event-Loop"><span class="nav-text">4. 事件循环(Event Loop)</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/01/byteTech/elementary_stage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo How2j">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="字节前端初阶训练营 | Hexo How2j">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          字节前端初阶训练营
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-08-01 22:08:17" itemprop="dateCreated datePublished" datetime="2023-08-01T22:08:17+08:00">2023-08-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-11 23:36:14" itemprop="dateModified" datetime="2023-08-11T23:36:14+08:00">2023-08-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ByteTech/" itemprop="url" rel="index"><span itemprop="name">ByteTech</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>16 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote class="blockquote-center">
+<p>字节前端初阶训练营 记录</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="Linux-基础"><a href="#Linux-基础" class="headerlink" title="Linux 基础"></a>Linux 基础</h2><h3 id="一、查看Linux系统内核版本"><a href="#一、查看Linux系统内核版本" class="headerlink" title="一、查看Linux系统内核版本"></a>一、查看Linux系统内核版本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br><span class="line">cat /proc/version</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、查看发行版本"><a href="#二、查看发行版本" class="headerlink" title="二、查看发行版本"></a>二、查看发行版本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/os-release</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、进程管理"><a href="#三、进程管理" class="headerlink" title="三、进程管理"></a>三、进程管理</h3><h4 id="1-概念："><a href="#1-概念：" class="headerlink" title="1. 概念："></a>1. 概念：</h4><ul>
+<li>进程是正在执行的程序的实例，是一个动态的概念，是程序的一次执行过程，是系统进行资源分配和调度的一个独立单位。</li>
+<li>进程有自己的地址空间， 占用一定的系统资源。</li>
+<li>一个CPU在同一时刻只能执行一个进程，多个进程并发执行。</li>
+<li>进程由它的进程ID(PID)和它的父进程ID(PPID)来唯一标识。</li>
+</ul>
+<h4 id="2-查看进程信息"><a href="#2-查看进程信息" class="headerlink" title="2. 查看进程信息"></a>2. 查看进程信息</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">参看启动的nginx进程</span></span><br><span class="line">ps -ef | grep nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看某个进程</span></span><br><span class="line">top -p 1234</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭进程</span></span><br><span class="line">kill -9 1234</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">全部进程动态实时查看</span></span><br><span class="line">top</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、文件管理"><a href="#四、文件管理" class="headerlink" title="四、文件管理"></a>四、文件管理</h3><h4 id="1-文件系统磁盘空间利用率"><a href="#1-文件系统磁盘空间利用率" class="headerlink" title="1. 文件系统磁盘空间利用率"></a>1. 文件系统磁盘空间利用率</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -T</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-文件基本操作"><a href="#2-文件基本操作" class="headerlink" title="2. 文件基本操作"></a>2. 文件基本操作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">文件夹内容</span></span><br><span class="line">ls -al</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建文件夹</span></span><br><span class="line">mkdir deme</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">移动 demo 文件夹到 /tmp 目录下</span></span><br><span class="line">mv demo /tmp</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除文件夹</span></span><br><span class="line">rm -rf demo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建文件</span></span><br><span class="line">touch demo.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">复制文件</span></span><br><span class="line">cp demo.txt demo2.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="五、用户权限"><a href="#五、用户权限" class="headerlink" title="五、用户权限"></a>五、用户权限</h3><h4 id="1-用户账户"><a href="#1-用户账户" class="headerlink" title="1. 用户账户"></a>1. 用户账户</h4><ul>
+<li><p>用户账户<br>  普通用户账户： 在系统中进行普通作业<br>  超级用户账户： 系统管理员，可以对系统进行管理</p>
+</li>
+<li><p>用户组<br>  标准组： 可以容纳多个用户<br>  私有组： 只有用户自己</p>
+</li>
+</ul>
+<h4 id="2-文件权限"><a href="#2-文件权限" class="headerlink" title="2. 文件权限"></a>2. 文件权限</h4><p>   所有者：文件的所有者<br>   所在组： 文件的所有者所在的组<br>   其他人： 除文件所有者所在组以外的其他用户</p>
+<ul>
+<li><p>文件权限<br>r: 读权限<br>w: 写权限<br>x: 执行权限</p>
+</li>
+<li><p>文件类型<br>-： 普通文件<br>d： 目录文件<br>l： 链接文件<br>b： 块设备文件<br>c： 字符设备文件<br>s： 套接字文件<br>p： 管道文件</p>
+</li>
+</ul>
+<h4 id="3-查看用户信息"><a href="#3-查看用户信息" class="headerlink" title="3. 查看用户信息"></a>3. 查看用户信息</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前用户</span></span><br><span class="line">W</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前用户信息</span></span><br><span class="line">groups</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看用户的uid信息</span></span><br><span class="line">id xxxx</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-用户权限操作"><a href="#4-用户权限操作" class="headerlink" title="4. 用户权限操作"></a>4. 用户权限操作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建文件夹，查看当前用户拥有文件夹的权限</span></span><br><span class="line">cd / &amp;&amp; mkdir demo &amp;&amp; ls -ld demo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建一个用户，赋予可写操作</span></span><br><span class="line">sudo useradd ceshei</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置用户密码</span></span><br><span class="line">sudo passwd ceshei</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换用户 ceshei 登录</span></span><br><span class="line">su ceshei</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入 demo 文件夹</span></span><br><span class="line">cd /demo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建文件，提示没有权限，分配文件夹权限</span></span><br><span class="line">touch demo.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">demo 文件夹权限分配</span></span><br><span class="line">sudo chmod O+r ./demo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换用户 ceshei 登录</span></span><br><span class="line">su ceshei</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入 demo 文件夹</span></span><br><span class="line">cd demo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建文件成功</span></span><br><span class="line">touch demo.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、软件包管理工具"><a href="#六、软件包管理工具" class="headerlink" title="六、软件包管理工具"></a>六、软件包管理工具</h3><table>
+<thead>
+<tr>
+<th align="left">操作系统</th>
+<th align="left">格式</th>
+<th align="left">软件包管理系统</th>
+<th align="left">软件包管理工具</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Debian</td>
+<td align="left">.deb</td>
+<td align="left">dpkg</td>
+<td align="left">apt, apt-get</td>
+</tr>
+<tr>
+<td align="left">RedHat</td>
+<td align="left">.rpm</td>
+<td align="left">rpm</td>
+<td align="left">yum</td>
+</tr>
+<tr>
+<td align="left">Ubuntu</td>
+<td align="left">.deb</td>
+<td align="left">dpkg</td>
+<td align="left">apt, apt-get</td>
+</tr>
+<tr>
+<td align="left">CentOS</td>
+<td align="left">.rpm</td>
+<td align="left">rpm</td>
+<td align="left">yum</td>
+</tr>
+<tr>
+<td align="left">Fedora</td>
+<td align="left">.rpm</td>
+<td align="left">rpm</td>
+<td align="left">dnf</td>
+</tr>
+<tr>
+<td align="left">OpenSUSE</td>
+<td align="left">.rpm</td>
+<td align="left">rpm</td>
+<td align="left">zypper</td>
+</tr>
+</tbody></table>
+<h4 id="1-Debian-APT-常用命令"><a href="#1-Debian-APT-常用命令" class="headerlink" title="1. Debian APT 常用命令"></a>1. Debian APT 常用命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新软件包列表</span></span><br><span class="line">apt update</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装指定的软件包命令</span></span><br><span class="line">apt install &lt;package&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装多个</span></span><br><span class="line">apt install &lt;package1&gt; &lt;package2&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新指定的软件包命令</span></span><br><span class="line">apt update &lt;package&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除指定的软件包命令</span></span><br><span class="line">apt remove &lt;package&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查找软件包命令</span></span><br><span class="line">apt search &lt;package&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">列出已安装的软件包命令</span></span><br><span class="line">apt list --installed</span><br></pre></td></tr></table></figure>
+
+<h2 id="Shell-基础"><a href="#Shell-基础" class="headerlink" title="Shell 基础"></a>Shell 基础</h2><h3 id="一、语法和命令"><a href="#一、语法和命令" class="headerlink" title="一、语法和命令"></a>一、语法和命令</h3><h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><table>
+<thead>
+<tr>
+<th align="left">变量类型</th>
+<th align="left">作用域</th>
+<th align="left">声明方式</th>
+<th align="left">规范</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">自定义变量</td>
+<td align="left">当前shell</td>
+<td align="left">var&#x3D;value</td>
+<td align="left">变量名建议大写</td>
+</tr>
+<tr>
+<td align="left">环境变量</td>
+<td align="left">当前shell及其子shel</td>
+<td align="left">export ， declare -x</td>
+<td align="left">变量名建议大写</td>
+</tr>
+<tr>
+<td align="left">系统环境变量</td>
+<td align="left">所有shell</td>
+<td align="left">启动加载</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h4 id="2-自定义变量"><a href="#2-自定义变量" class="headerlink" title="2. 自定义变量"></a>2. 自定义变量</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">自定义变量, 等号两边不能有空格</span></span><br><span class="line">page_name=1</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将命令赋值给变量</span></span><br><span class="line">_ls=ls</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将命令结果赋值给变量</span></span><br><span class="line">file_list=$(ls -a)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">声明变量为整形</span></span><br><span class="line">let total=page_name+1</span><br><span class="line">declare -i total=page_name+1  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">导出变量为环境变量</span></span><br><span class="line">export total</span><br><span class="line">declare -x total</span><br></pre></td></tr></table></figure>
+
+<p>declare 命令  </p>
+<p>shell中所有变量默认都是字符串，使用declare命令可以显示的声明变量的类型，包括整型、字符串、数组等。  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">语法 <span class="built_in">declare</span> [+/-] [-aixr] variable</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">取消变量的属性</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">设置变量的属性</td>
+</tr>
+<tr>
+<td align="left">-a</td>
+<td align="left">声明变量为数组</td>
+</tr>
+<tr>
+<td align="left">-i</td>
+<td align="left">声明变量为整型</td>
+</tr>
+<tr>
+<td align="left">-x</td>
+<td align="left">声明变量为环境变量</td>
+</tr>
+<tr>
+<td align="left">-r</td>
+<td align="left">声明变量为只读变量</td>
+</tr>
+<tr>
+<td align="left">-p</td>
+<td align="left">显示指定变量的类型</td>
+</tr>
+</tbody></table>
+<h4 id="3-环境变量"><a href="#3-环境变量" class="headerlink" title="3. 环境变量"></a>3. 环境变量</h4><table>
+<thead>
+<tr>
+<th align="left">变量名</th>
+<th align="left">含义</th>
+<th align="left">常见操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$0</td>
+<td align="left">当前shell名称、脚本名称</td>
+<td align="left">echo $0</td>
+</tr>
+<tr>
+<td align="left">$#</td>
+<td align="left">传递给脚本或函数的参数个数</td>
+<td align="left">if [$# -gt 1]</td>
+</tr>
+<tr>
+<td align="left">$*</td>
+<td align="left">传递给脚本或函数的所有参数</td>
+<td align="left">for i in $*</td>
+</tr>
+<tr>
+<td align="left">$?</td>
+<td align="left">上一个命令的执行的状态或函数的返回值</td>
+<td align="left">if [$? -eq 0]</td>
+</tr>
+<tr>
+<td align="left">$PS1</td>
+<td align="left">命令提示符</td>
+<td align="left">echo $PS1</td>
+</tr>
+<tr>
+<td align="left">$HOME</td>
+<td align="left">用户主文件夹</td>
+<td align="left">cd $HOME</td>
+</tr>
+<tr>
+<td align="left">$PATH</td>
+<td align="left">环境变量</td>
+<td align="left">PATH&#x3D;$PATH:[new path]</td>
+</tr>
+</tbody></table>
+<h4 id="4-运算符和引用"><a href="#4-运算符和引用" class="headerlink" title="4. 运算符和引用"></a>4. 运算符和引用</h4><table  style="text-align: center;">
+    <tr>
+        <td>类型</td>
+        <td>符号</td>
+        <td>作用</td>
+        <td>用法</td>
+    </tr>
+    <tr>
+        <td>算术运算符</td>
+        <td> + - * / % =</td>
+        <td>算术运算</td>
+        <td> let a=1+2</td>
+    </tr>
+    <tr>
+        <td>逻辑运算符</td>
+        <td>&& \|\| !</td>
+        <td>逻辑运算</td>
+        <td>if [ $a -gt 1 ] && [ $b -gt 1 ] </td>
+    </tr>
+    <tr>
+        <td>比较运算符</td>
+        <td> == != < ></td>
+        <td>比较运算</td>
+        <td> if [ $a -gt 1 ]</td>
+    </tr>
+    <tr>
+        <td rowspan="3">引号</td>
+        <td>双引号 ""</td>
+        <td>部分引用，仅$`\保留作用</td>
+        <td>foo="${a}213"</td>
+    </tr>
+    <tr>
+        <td>单引号''</td>
+        <td>完全引用，原样输出</td>
+        <td>foo='foo$a'</td>
+    </tr>
+    <tr>
+        <td>反引号 ``</td>
+        <td>执行命令</td>
+        <td>foo=`ls -a`</td>
+    </tr>
+    <tr>
+        <td rowspan="2">圆括号</td>
+        <td>(())</td>
+        <td>整数运算</td>
+        <td>foo=$((1+2))</td>
+    </tr>
+    <tr>
+        <td>()</td>
+        <td>执行命令</td>
+        <td>foo=$(ls -a)</td>
+    </tr>
+    <tr>
+        <td rowspan="3">命令连接</td>
+        <td>||</td>
+        <td>cmd1执行完且返回码非0，则继续执行cmd2</td>
+        <td>cmd1 || cmd2</td>
+    </tr>
+    <tr>
+        <td>&&</td>
+        <td>cmd1执行完且返回码为0，则继续执行cmd2</td>
+        <td>cmd1 && cmd2</td>
+    </tr>
+    <tr>
+        <td>;</td>
+        <td>cmd1、cmd2串行执行</td>
+        <td>cmd1;cmd2</td>
+    </tr>
+    <tr>
+        <td>后台执行</td>
+        <td>&</td>
+        <td>可与nohup一起使用</td>
+        <td>cmd &</td>
+    </tr>
+</table>
+
+<h4 id="5-管道"><a href="#5-管道" class="headerlink" title="5. 管道"></a>5. 管道</h4><p>管道是一种特殊的文件，它不是普通的文件，而是一种特殊的文件类型，它的作用是将前一个命令的输出结果作为后一个命令的输入。  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">cat platform.access.log | grep ERROR</span><br><span class="line"></span><br><span class="line">netstat -an | grep ESTABLISHED | wc -l</span><br><span class="line"></span><br><span class="line">find . -maxdepth 1 -name &quot;*.sh&quot; | xargs ls -l</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-重定向"><a href="#6-重定向" class="headerlink" title="6. 重定向"></a>6. 重定向</h4><table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&gt;</td>
+<td align="left">覆盖写入文件</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">追加写入文件</td>
+</tr>
+<tr>
+<td align="left">2&gt;</td>
+<td align="left">覆盖写入错误信息</td>
+</tr>
+<tr>
+<td align="left">&amp;&gt;</td>
+<td align="left">覆盖写入所有信息</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">输入重定向</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">输入重定向</td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">覆盖写入文件</span></span><br><span class="line">echo &quot;hello world&quot; &gt; hello.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">追加写入文件</span></span><br><span class="line">echo &quot;hello world&quot; &gt;&gt; hello.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">覆盖写入错误信息</span></span><br><span class="line">ls -l /etc/passwd /etc/hosts 2&gt; error.txt</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">覆盖写入所有信息</span></span><br><span class="line">ls -l /etc/passwd /etc/hosts &amp;&gt; all.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-判断命令"><a href="#7-判断命令" class="headerlink" title="7. 判断命令"></a>7. 判断命令</h4><p>语法： test condition 或者 [ condition ] 或者 [[ condition ]]  </p>
+<p>注意：</p>
+<ul>
+<li>中括号两边必须有空格</li>
+<li>[ 和 test是命令，只能使用自己支持的标志位，&lt;、&gt;、&#x3D;只能用来比较字符串，-lt、-gt、-eq只能用来比较数字</li>
+<li>中括号内的变量必须要用双引号引起来，否则如果变量为空，会报错</li>
+<li>[[ 更丰富，在整形比较中支持&lt;、&gt;、&#x3D;，在字符串比较中支持&#x3D;&#x3D;、!&#x3D;、正则，并且不需要引号引起来</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">整形测试</span></span><br><span class="line">test $n1 -eg $n2</span><br><span class="line">test $n1 -lt $n2</span><br><span class="line">test $n1 -gt $n2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">字符串测试</span></span><br><span class="line">test -z $str_a</span><br><span class="line">test -n $str_a</span><br><span class="line">test $str_a = $str_b</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">文件测试</span></span><br><span class="line">test -e /dmt &amp;&amp; echo &quot;exist&quot;</span><br><span class="line">test -f /usr/bin/npm &amp;&amp; echo &quot;file&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-分支语句"><a href="#8-分支语句" class="headerlink" title="8. 分支语句"></a>8. 分支语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第一种</span></span><br><span class="line">level=0</span><br><span class="line">if [ -n &quot;$level&quot;]; then</span><br><span class="line">  if [ &quot;$level&quot; == 0 ]; then</span><br><span class="line">      prefix=&quot;ERROR&quot;</span><br><span class="line">  elif [ &quot;$level&quot; == 1 ]; then</span><br><span class="line">      prefix=&quot;INFO&quot;</span><br><span class="line">  elif</span><br><span class="line">      echo &quot;log level not supported&quot;</span><br><span class="line">  fi</span><br><span class="line">fi</span><br><span class="line">echo &quot;[$&#123;prefix&#125;] $mesage&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第二种</span></span><br><span class="line">name=john</span><br><span class="line"></span><br><span class="line">case $name in</span><br><span class="line">&quot;nick&quot;)</span><br><span class="line">  echo &quot;nick&quot;</span><br><span class="line">  ;;</span><br><span class="line">&quot;john&quot;)</span><br><span class="line">    echo &quot;john&quot;</span><br><span class="line">    ;;</span><br><span class="line">*)</span><br><span class="line">    echo &quot;not found&quot;</span><br><span class="line">    ;;  </span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-循环语句"><a href="#9-循环语句" class="headerlink" title="9. 循环语句"></a>9. 循环语句</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">while</span></span></span><br><span class="line">while [ condition ] ; do command ; done</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">until</span></span></span><br><span class="line">until [ condition ] ; do command ; done</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">for</span></span></span><br><span class="line">for var in list ; do command ; done</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">example</span></span><br><span class="line">let num=0</span><br><span class="line">until [ $name -gt 10 ]; do</span><br><span class="line">    echo &quot;current idx: $num&quot;</span><br><span class="line">    ((num++))</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-函数"><a href="#10-函数" class="headerlink" title="10. 函数"></a>10. 函数</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第一种</span></span><br><span class="line">funcName()&#123; echo &quot;abc&quot;;&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第二种</span></span><br><span class="line">function funcName()&#123; echo &quot;abc&quot;;&#125;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">example</span></span><br><span class="line">printName()&#123;</span><br><span class="line">    if [ $# -lt 2 ]; then</span><br><span class="line">        echo &quot;usage: printName name age&quot;</span><br><span class="line">        exit 1</span><br><span class="line">    fi</span><br><span class="line">    echo &quot;name: $1, age: $2&quot;</span><br><span class="line">&#125;</span><br><span class="line">printName &quot;nick&quot; 18</span><br></pre></td></tr></table></figure>
+
+<h4 id="11-模块化"><a href="#11-模块化" class="headerlink" title="11. 模块化"></a>11. 模块化</h4><p>math.sh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">function add() &#123;</span><br><span class="line">    declare -i sum=$1+$2</span><br><span class="line">    echo $sum</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>main.sh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">source math.sh</span><br><span class="line">total=$(add 1 2)</span><br><span class="line">echo $total</span><br></pre></td></tr></table></figure>
+
+<h4 id="12-常用命令"><a href="#12-常用命令" class="headerlink" title="12. 常用命令"></a>12. 常用命令</h4><table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">grep</td>
+<td align="left">查找, 查找错误日志： grep -n “ERROR” -A3 -B3 clouding.log  统计次数：grep -n “ERROR” -c cloudfun.lgo</td>
+</tr>
+<tr>
+<td align="left">sort</td>
+<td align="left">排序, 按照第一列排序：sort -k1 clouding.log  按照第一列逆序排序：sort -k1 -r clouding.log</td>
+</tr>
+<tr>
+<td align="left">wc</td>
+<td align="left">统计出现的次数，统计行数：wc -l clouding.log  统计单词数：wc -w clouding.log  统计字符数：wc -c clouding.log</td>
+</tr>
+<tr>
+<td align="left">head</td>
+<td align="left">查看前几行，查看前10行：head -n 10 clouding.log</td>
+</tr>
+<tr>
+<td align="left">tail</td>
+<td align="left">查看后几行，查看后10行：tail -n 10 clouding.log</td>
+</tr>
+<tr>
+<td align="left">cut</td>
+<td align="left">截取，截取第一列：cut -d “ “ -f 1 clouding.log</td>
+</tr>
+<tr>
+<td align="left">find</td>
+<td align="left">查找，查找当前目录下的所有文件：find . -name “*.sh”</td>
+</tr>
+<tr>
+<td align="left">xargs</td>
+<td align="left">传递参数，查找当前目录下的所有文件：find . -name “*.sh”</td>
+</tr>
+<tr>
+<td align="left">which</td>
+<td align="left">查找命令的位置，查找ls命令的位置：which ls</td>
+</tr>
+</tbody></table>
+<h3 id="二、Shell展开"><a href="#二、Shell展开" class="headerlink" title="二、Shell展开"></a>二、Shell展开</h3><h4 id="1-大括号展开"><a href="#1-大括号展开" class="headerlink" title="1. 大括号展开"></a>1. 大括号展开</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">字符串</span></span><br><span class="line">a&#123;b,c,d&#125;e =&gt; abe ace ade</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">表达式</span></span><br><span class="line">&#123;1..5&#125; =&gt; 1 2 3 4 5</span><br><span class="line">&#123;1..5..2&#125; =&gt; 1 3 5</span><br><span class="line">&#123;a..e&#125; =&gt; a b c d e</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-波浪号展开"><a href="#2-波浪号展开" class="headerlink" title="2. 波浪号展开"></a>2. 波浪号展开</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">用户目录</span></span><br><span class="line">~ =&gt; $HOME</span><br><span class="line">~/foo =&gt; $HOME/foo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">指定用户目录</span></span><br><span class="line">~user/foo =&gt; 用户user的$HOME/foo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">当前工作目录</span></span><br><span class="line">~+/foo =&gt; $PWD/foo</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">上一个工作目录</span></span><br><span class="line">~-/foo =&gt; $&#123;$OLDPWD:-&#x27;~-&#x27;&#125;/foo</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-参数展开"><a href="#3-参数展开" class="headerlink" title="3. 参数展开"></a>3. 参数展开</h4><ol>
+<li>间接参数扩展${!parameter}，其中引用的参数并不是parameter而是parameter的实际的值</li>
+<li>参数长度 ${#parameter}</li>
+<li>空参数处理<ul>
+<li>${parameter:&#x3D;-word} 为空替换</li>
+<li>${parameter:&#x3D;word} 为空赋值，如果parameter为空，则赋值为word</li>
+<li>${parameter:?word} 为空报错，如果parameter为空，则报错，错误信息为word</li>
+<li>${parameter:+word} 为空忽略，如果parameter为空，则忽略word</li>
+</ul>
+</li>
+<li>参数切片<ul>
+<li>${parameter:offset} 从offset开始截取</li>
+<li>${parameter:offset:length} 从offset开始截取，截取长度为length</li>
+</ul>
+</li>
+<li>参数部分删除<ul>
+<li>${parameter#word} 从parameter的开头开始，删除最短匹配的word</li>
+<li>${parameter##word} 从parameter的开头开始，删除最长匹配的word</li>
+<li>${parameter%word} 从parameter的结尾开始，删除最短匹配的word</li>
+<li>${parameter%%word} 从parameter的结尾开始，删除最长匹配的word</li>
+</ul>
+</li>
+</ol>
+<h4 id="4-命令替换"><a href="#4-命令替换" class="headerlink" title="4. 命令替换"></a>4. 命令替换</h4><p>$(command) 会执行command命令，并将结果返回<br/><br>`command` 会执行command命令，并将结果返回</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">echo $(whoami)</span><br><span class="line">foo()&#123;</span><br><span class="line">  echo &quot;foo&quot;</span><br><span class="line">&#125;</span><br><span class="line">a=`foo`</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-算术扩展"><a href="#5-算术扩展" class="headerlink" title="5. 算术扩展"></a>5. 算术扩展</h4><p>  $((expression)) 会执行expression，并将结果返回</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">echo $((1+1))</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-文件名展开"><a href="#6-文件名展开" class="headerlink" title="6. 文件名展开"></a>6. 文件名展开</h4><p>  文件名展开是指将通配符展开为文件名，通配符包括：* ? [ ]<br/><br>  当有单词没有被引号包围时且出现了 ‘*’, “?”, and “[“ 字符，则Shell会去按照正则匹配的方式查找文件名，如果找到了，则将其替换为文件名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">echo D*</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出当前目录下以D开头的文件名</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="编程范式"><a href="#编程范式" class="headerlink" title="编程范式"></a>编程范式</h2><p>概念：编程范式是一种编程风格或方法论，用于指导程序员在解决问题时如何组织和表达代码。它是一种抽象的概念，描述了计算机编程中的一系列原则和规则，以及程序设计的思维方式。不同的编程范式强调不同的概念和技术，以适应不同类型的问题和场景。根据程序语言的特性，如是否允许副作用，操作的执行顺序，代码组织，状态管理，语法和词法等，可以将编程范式分为不同的类型。</p>
+<h3 id="一、命令式"><a href="#一、命令式" class="headerlink" title="一、命令式"></a>一、命令式</h3><h4 id="1-面向过程"><a href="#1-面向过程" class="headerlink" title="1. 面向过程"></a>1. 面向过程</h4><p>自顶向下，结构化编程</p>
+<h4 id="2-面向对象"><a href="#2-面向对象" class="headerlink" title="2. 面向对象"></a>2. 面向对象</h4><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>封装: 关联数据与算法</li>
+<li>继承: 无需重写的情况下进行功能扩展</li>
+<li>多态: 不同的结构可以进行接口共享，进而达到函数重用</li>
+<li>依赖注入: 去除代码耦合</li>
+</ul>
+<h4 id="五大基本原则"><a href="#五大基本原则" class="headerlink" title="五大基本原则"></a>五大基本原则</h4><ul>
+<li>单一职责原则(SRP-Single Responsibility Principle): 一个类只负责一个功能领域中的相应职责</li>
+<li>开闭原则(OCP-Open Close Principle): 软件实体应对扩展开放，而对修改关闭</li>
+<li>里氏替换原则(LSP-the LisKov Substitution Principle LSP): 所有引用基类的地方必须能透明地使用其子类的对象</li>
+<li>依赖倒置原则(DIP-the Dependency Inversion Principle DIP): 抽象不应该依赖于细节，细节应该依赖于抽象</li>
+<li>接口隔离原则(ISP-the Interface Segregation Principle ISP): 使用多个专门的接口，而不使用单一的总接口</li>
+</ul>
+<h3 id="二、声明式"><a href="#二、声明式" class="headerlink" title="二、声明式"></a>二、声明式</h3><h4 id="1-函数式"><a href="#1-函数式" class="headerlink" title="1. 函数式"></a>1. 函数式</h4><ul>
+<li>函数是 “第一等公民”</li>
+<li>纯函数 &#x2F; 无副作用</li>
+<li>高阶函数 &#x2F; 闭包</li>
+<li>First Class Function &#x2F; Pure Function &#x2F; Currying &#x2F; Composition &#x2F; Functor &#x2F; Monad &#x2F; Applicative</li>
+</ul>
+<h4 id="2-响应式"><a href="#2-响应式" class="headerlink" title="2. 响应式"></a>2. 响应式</h4><ul>
+<li>异步&#x2F;离散的函数式编程<ul>
+<li>数据流</li>
+<li>操作符</li>
+</ul>
+</li>
+<li>Observable<ul>
+<li>观察者模式</li>
+<li>迭代器模式</li>
+<li>Promise&#x2F;EventTarget 超集</li>
+</ul>
+</li>
+<li>Compose<ul>
+<li>合并</li>
+<li>过滤</li>
+<li>转化</li>
+<li>异常处理</li>
+<li>多播</li>
+</ul>
+</li>
+<li>Monads<ul>
+<li>Maybe</li>
+<li>Either</li>
+<li>IO</li>
+<li>Task</li>
+<li>Reader</li>
+<li>State</li>
+<li>Writer</li>
+</ul>
+</li>
+</ul>
+<h3 id="三、邻域特定语言"><a href="#三、邻域特定语言" class="headerlink" title="三、邻域特定语言"></a>三、邻域特定语言</h3><p>待补充</p>
+<h2 id="客户端容器"><a href="#客户端容器" class="headerlink" title="客户端容器"></a>客户端容器</h2><h3 id="一、浏览器架构"><a href="#一、浏览器架构" class="headerlink" title="一、浏览器架构"></a>一、浏览器架构</h3><p><img src="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308042238117.png"></p>
+<p>单进程架构: 所有模块运行在同一个进程里，包含网路、插件、JavaScript运行环境  </p>
+<p><strong>多进程架构</strong>: 主进程、网络进程、渲染进程、CPU进程、插件进程  </p>
+<p>面向服务架构: 将原来的UI、数据库、文件、设备、网路等，作为一个独立的基础服务</p>
+<p>架构对比： </p>
+<table>
+<thead>
+<tr>
+<th align="center">构架类型</th>
+<th align="center">扩展性</th>
+<th align="center">安全性</th>
+<th align="center">稳定性</th>
+<th align="center">流程度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单进程架构</td>
+<td align="center">低，所有模块运行在同一进程里，访问同一块内存区域，数据没有隔离，新增模块可能会影响原有功能</td>
+<td align="center">低，三方插件可直接访问操作系统任意资源</td>
+<td align="center">低，三方插件漏洞或者某个tab页面JavaScript脚本问题可能导致浏览器崩溃</td>
+<td align="center">卡顿，所有页面运行在同一进程中，开启多个页面明显卡顿</td>
+</tr>
+<tr>
+<td align="center">多进程架构</td>
+<td align="center">中，各进程分配独立的内存区域，有些进程功能较大，耦合度高</td>
+<td align="center">高，运行在独立沙箱中，不能访问系统敏感资源</td>
+<td align="center">高，进程相互隔离，当一个页面或者插件崩溃时，不会影响其他进程</td>
+<td align="center">流程，每个页面运行在独立的渲染进程中，充分利用系统资源</td>
+</tr>
+<tr>
+<td align="center">面向服务架构</td>
+<td align="center">高，服务模块划分更细，更内聚，耦合性低，易于扩展</td>
+<td align="center">高，运行在独立沙箱中，不能访问系统敏感资源</td>
+<td align="center">高，进程相互隔离，当一个页面或者插件崩溃时，不会影响其他进程</td>
+<td align="center">流程，每个页面运行在独立的渲染进程中，充分利用系统资源</td>
+</tr>
+</tbody></table>
+<h3 id="二、多进程的分工"><a href="#二、多进程的分工" class="headerlink" title="二、多进程的分工"></a>二、多进程的分工</h3><table>
+<thead>
+<tr>
+<th align="center">进程名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">浏览器(主进程)</td>
+<td align="center">主要赋值页面展示逻辑，用户交互，子进程管理，包括地址栏，书签，前进，后退，收藏夹等功能</td>
+</tr>
+<tr>
+<td align="center">GPU进程</td>
+<td align="center">负责UI绘制，包含整个浏览器全部UI</td>
+</tr>
+<tr>
+<td align="center">网络进程</td>
+<td align="center">用于处理网络请求，如HTTP请求，文件下载等，主要是将请求后的数据传递给渲染进程</td>
+</tr>
+<tr>
+<td align="center">标签页(渲染进程)</td>
+<td align="center">控制tab内的所有内容，将html，css和JavaScript转换为用户可交互的网页</td>
+</tr>
+<tr>
+<td align="center">插件进程</td>
+<td align="center">控制网站运行的插件，比如flash，modheader等</td>
+</tr>
+<tr>
+<td align="center">其他进程</td>
+<td align="center">适用程序Storage&#x2F;Network&#x2F;Audio Service等</td>
+</tr>
+</tbody></table>
+<h3 id="三、渲染进程"><a href="#三、渲染进程" class="headerlink" title="三、渲染进程"></a>三、渲染进程</h3><h4 id="1-渲染进程的组成"><a href="#1-渲染进程的组成" class="headerlink" title="1. 渲染进程的组成"></a>1. 渲染进程的组成</h4><p><img src="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308042302789.png"></p>
+<table>
+<thead>
+<tr>
+<th align="center">线程</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">GUI渲染线程</td>
+<td align="center">负责渲染浏览器界面，解析HTML，CSS，构建DOM树和RenderObject树，布局和绘制等，和Js引擎线程互斥，GUI更新会在Js引擎空闲时立即执行</td>
+</tr>
+<tr>
+<td align="center">Js引擎</td>
+<td align="center">负责解析Js脚本，运行Js程序，每个渲染进程下面只有一个Js引擎线程，与GUI渲染线程互斥，如果Js任务执行事件过长，会导致页面卡顿</td>
+</tr>
+<tr>
+<td align="center">定时器触发</td>
+<td align="center">定时器所在线程， stTimeout，setInterval计时完毕后，将回调添加到事件队列，等待Js引擎执行</td>
+</tr>
+<tr>
+<td align="center">网络线程</td>
+<td align="center">在XHR，Fetch等发起请求后新开一个网络线程请求，如果设置了回调函数，在状态变更时，将回调放入事件队列，等待Js引擎执行</td>
+</tr>
+<tr>
+<td align="center">事件触发</td>
+<td align="center">右宿主环境提供，用于控制时间循环，不断从事件队列里取出任务执行</td>
+</tr>
+</tbody></table>
+<p><img src="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308101047706.png"></p>
+<h4 id="2-渲染进程的工作流程"><a href="#2-渲染进程的工作流程" class="headerlink" title="2. 渲染进程的工作流程"></a>2. 渲染进程的工作流程</h4><ol>
+<li>网络线程负责加载网页资源</li>
+<li>Js引擎解析Js脚本并执行</li>
+<li>Js解析引擎空闲时，渲染线程立即工作</li>
+<li>用户交互，定时器操作等产生回调函数放入任务队列中</li>
+<li>事件线程进行事件循环，将队列里的任务取出交给Js引擎执行</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/browser_202308101048433.png"></p>
+<h3 id="四、优化"><a href="#四、优化" class="headerlink" title="四、优化"></a>四、优化</h3><h4 id="1-首屏优化"><a href="#1-首屏优化" class="headerlink" title="1. 首屏优化"></a>1. 首屏优化</h4><ol>
+<li>压缩、分包、删除无用代码</li>
+<li>静态资源分离</li>
+<li>Js脚本非阻塞加载</li>
+<li>缓存策略</li>
+<li>SSR</li>
+<li>预置loading，骨架屏</li>
+</ol>
+<h4 id="2-优化渲染性能"><a href="#2-优化渲染性能" class="headerlink" title="2. 优化渲染性能"></a>2. 优化渲染性能</h4><ol>
+<li>减少重绘和回流</li>
+<li>GPU加速</li>
+<li>离屏渲染</li>
+<li>懒加载</li>
+</ol>
+<h4 id="3-JS优化"><a href="#3-JS优化" class="headerlink" title="3. JS优化"></a>3. JS优化</h4><ol>
+<li>减少DOM操作</li>
+<li>防止内存泄漏</li>
+<li>循环尽早break</li>
+<li>合理使用闭包</li>
+<li>防抖节流</li>
+<li>Web Worker</li>
+</ol>
+<h2 id="深入理解JS"><a href="#深入理解JS" class="headerlink" title="深入理解JS"></a>深入理解JS</h2><p>JS是单线程，动态、弱类型语言</p>
+<ul>
+<li>动态语言(弱类型语言)是运行时才确定数据类型的语言，变量在使用之前无需声明类型</li>
+<li>静态语言(强类型语言)是在编译时确定数据类型的语言，变量在使用之前需要声明类型</li>
+</ul>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>变量的可访问性和可见性，分为全局作用域和函数作用域、块级作用域。</p>
+<p>静态作用域，通过它预测代码在执行过程中如何查找标识符</p>
+<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>var有变量提升，let和const没有变量提升  </p>
+<p>function可以先调用再定义  </p>
+<p>赋值给变量的函数无法提前调用</p>
+<h3 id="JS如何执行的"><a href="#JS如何执行的" class="headerlink" title="JS如何执行的"></a>JS如何执行的</h3><p><img src="https://cdn.jsdelivr.net/gh/How2j-online/blogImage@main/HEXO-BLOG/js_202308112107279.png"></p>
+<h3 id="JS的进阶知识点"><a href="#JS的进阶知识点" class="headerlink" title="JS的进阶知识点"></a>JS的进阶知识点</h3><h4 id="1-闭包"><a href="#1-闭包" class="headerlink" title="1. 闭包"></a>1. 闭包</h4><h4 id="2-this"><a href="#2-this" class="headerlink" title="2. this"></a>2. this</h4><h4 id="3-垃圾回收"><a href="#3-垃圾回收" class="headerlink" title="3. 垃圾回收"></a>3. 垃圾回收</h4><h4 id="4-事件循环-Event-Loop"><a href="#4-事件循环-Event-Loop" class="headerlink" title="4. 事件循环(Event Loop)"></a>4. 事件循环(Event Loop)</h4>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/01/blog/record-setting/" rel="prev" title="blog配置">
+                  <i class="fa fa-angle-left"></i> blog配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/08/05/learning/dsa/queue/" rel="next" title="队列">
+                  队列 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">how2j</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">7k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
