@@ -221,7 +221,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-23 19:23:17" itemprop="dateModified" datetime="2023-08-23T19:23:17+08:00">2023-08-23</time>
+      <time title="修改时间：2023-11-01 20:08:26" itemprop="dateModified" datetime="2023-11-01T20:08:26+08:00">2023-11-01</time>
     </span>
 
   
@@ -231,7 +231,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>786</span>
+      <span>793</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -249,47 +249,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="this的绑定规则"><a href="#this的绑定规则" class="headerlink" title="this的绑定规则"></a>this的绑定规则</h2><ol>
-<li>函数在调用时，js会默认给this绑定一个值。</li>
-<li>this的绑定和定义的文字没有任何关系。</li>
-<li>与调用方式以及调用位置有关。</li>
-<li>this是在运行时进行绑定的，而不是在编写时绑定，它的上下文取决于函数调用时的各种条件。this的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。</li>
-</ol>
-<h3 id="默认绑定"><a href="#默认绑定" class="headerlink" title="默认绑定"></a>默认绑定</h3><p>函数独立调用时，会使用默认绑定，this指向全局对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line"><span class="title function_">foo</span>(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h3><p>函数作为对象的方法调用时，this指向该对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line">obj.<span class="title function_">foo</span>(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="显示绑定"><a href="#显示绑定" class="headerlink" title="显示绑定"></a>显示绑定</h3><p>使用call、apply、bind方法，this指向绑定的对象。</p>
-<p>call和apply的区别在于传入的参数不同，call接受参数列表，apply接受参数数组。<br>bind方法会创建一个新函数，称为绑定函数，当调用这个函数时，绑定函数会以创建它时传入bind方法的第一个参数作为this，传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line">foo.<span class="title function_">call</span>(obj, <span class="number">1</span>, <span class="number">2</span>); <span class="comment">// 2</span></span><br><span class="line">foo.<span class="title function_">apply</span>(obj, [<span class="number">1</span>, <span class="number">2</span>]); <span class="comment">// 2</span></span><br><span class="line">foo.<span class="title function_">bind</span>(obj, <span class="number">1</span>, <span class="number">2</span>)(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="new绑定"><a href="#new绑定" class="headerlink" title="new绑定"></a>new绑定</h3><p>使用new调用函数时，this指向新创建的对象。<br>当一个函数使用new来调用时，我们会构造一个新的对象并把它绑定到函数调用的this上。</p>
-<ol>
-<li>创建一个新对象</li>
-<li>这个新对象会被执行[[原型]]连接</li>
-<li>这个新对象会绑定到函数调用的this上</li>
-<li>如果函数没有返回其他对象，那么new表达式中的函数调用会自动返回这个新对象</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params">a</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">a</span> = a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> <span class="title function_">foo</span>(<span class="number">2</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bar.<span class="property">a</span>); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="内置函数绑定"><a href="#内置函数绑定" class="headerlink" title="内置函数绑定"></a>内置函数绑定</h3><p>内置函数的this指向全局对象或者undefined。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">setTimeout</span>(foo, <span class="number">100</span>); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="this绑定优先级"><a href="#this绑定优先级" class="headerlink" title="this绑定优先级"></a>this绑定优先级</h3><ol>
-<li>new绑定 &gt; 显示绑定 &gt; 隐式绑定 &gt; 默认绑定</li>
-<li>new绑定和显示绑定是显式绑定，this指向绑定的对象</li>
-<li>隐式绑定和默认绑定是隐式绑定，this指向调用位置的上下文对象或者全局对象</li>
-<li>new绑定和隐式绑定是优先级最高的，new绑定会把this绑定到新创建的对象上，隐式绑定会把this绑定到调用位置的上下文对象上</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 显示绑定 &gt; 隐式绑定</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line">obj1.<span class="property">foo</span>.<span class="title function_">apply</span>(<span class="string">&quot;abc&quot;</span>); <span class="comment">// &quot;abc&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new绑定 &gt; 隐式绑定</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">new</span> obj2.<span class="title function_">foo</span>(); <span class="comment">// &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new绑定 &gt; bind绑定</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj3 = &#123;</span><br><span class="line">  <span class="attr">a</span>: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> bar = foo.<span class="title function_">bind</span>(obj3);</span><br><span class="line"><span class="keyword">new</span> <span class="title function_">bar</span>(); <span class="comment">// &#123;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="显示之外的绑定"><a href="#显示之外的绑定" class="headerlink" title="显示之外的绑定"></a>显示之外的绑定</h3><ol>
-<li>显示绑定null或者undefined，规则会使用默认绑定，this指向全局对象, 严格模式下指向null或者undefined</li>
-<li>间接函数引用(obj1.foo &#x3D; obj2.foo)()</li>
-</ol>
-
+          <p>js this 学习记录</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/08/16/learning/js/one/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

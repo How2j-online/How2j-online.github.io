@@ -825,7 +825,10 @@
   <entry>
     <title>JavaScript 高级</title>
     <url>/2023/08/16/learning/js/one/</url>
-    <content><![CDATA[<h2 id="this的绑定规则"><a href="#this的绑定规则" class="headerlink" title="this的绑定规则"></a>this的绑定规则</h2><ol>
+    <content><![CDATA[<p>js this 学习记录</p>
+<span id="more"></span>
+
+<h2 id="this的绑定规则"><a href="#this的绑定规则" class="headerlink" title="this的绑定规则"></a>this的绑定规则</h2><ol>
 <li>函数在调用时，js会默认给this绑定一个值。</li>
 <li>this的绑定和定义的文字没有任何关系。</li>
 <li>与调用方式以及调用位置有关。</li>
